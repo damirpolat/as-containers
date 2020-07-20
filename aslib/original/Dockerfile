@@ -19,7 +19,8 @@ RUN apt-get update && apt-get install -y \
 
 
 # install R packages
-RUN R -e "install.packages('aslib')"
+RUN R -e "install.packages('devtools')"
+RUN R -e "install_github('https://github.com/coseal/aslib-r')"
 
 # get aslib repo
 RUN mkdir home/aslib
